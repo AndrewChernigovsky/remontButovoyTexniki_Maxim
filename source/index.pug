@@ -1,0 +1,27 @@
+extends pug/layout/main.pug
+
+block variables
+	- let nameCss = 'css/styles.min.css'
+	- let nameScript = 'js/script.min.js'
+	- let nameScriptVendors = 'js/vendors.min.js'
+	- let titleName = 'БытРемонт'
+	- let title = 'Главная'
+	- let telephone = 'tel:+79260000000'
+	- let telephoneText = '+7 (926) 000-00-00'
+
+block mixins
+	include pug/mixins/mixin.pug
+block header
+	include pug/common/header.pug
+block main
+	include pug/sections/mainslider.pug
+	//- include pug/sections/education.pug
+	//- include pug/sections/news.pug
+	//- include pug/sections/about.pug
+	//- include pug/sections/teachers.pug
+	//- include pug/sections/reviews.pug
+	//- include pug/sections/form.pug
+	//- include pug/sections/contacts.pug
+block footer
+	include pug/common/footer.pug
+	//- include pug/sections/help.pug
