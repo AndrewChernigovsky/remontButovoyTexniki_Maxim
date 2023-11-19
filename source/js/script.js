@@ -9,9 +9,16 @@ import {
 } from '../vendorInit/modules/oprimizations/optimizations.js';
 // import * as arrowUp from "../vendorInit/up-arrow/up-arrow.js";
 
-document.addEventListener("DOMContentLoaded", function () {
+// document.addEventListener("DOMContentLoaded", function () {
+// 	burger()
+// 	swiperMainInit()
+// 	// arrowUp
+// 	optimizations()
+// })
+
+window.onload = () => {
 	burger()
 	swiperMainInit()
 	// arrowUp
 	optimizations()
-})
+}

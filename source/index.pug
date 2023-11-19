@@ -14,7 +14,16 @@ block mixins
 block header
 	include pug/common/header.pug
 block main
-	include pug/sections/mainslider.pug
+	include pug/sections/intro.pug
+	.wrapppper
+		+picture('img/content/sliderMain/slide-1', 'jpg', 'сельское хозяйство', '380', '500')
+		+picture('img/content/sliderMain/slide-2', 'jpg', 'сельское хозяйство', '380', '500')
+		+picture('img/content/sliderMain/slide-3', 'jpg', 'сельское хозяйство', '380', '500')
+		+picture('img/content/sliderMain/slide-3', 'jpg', 'сельское хозяйство', '380', '500')
+		+picture('img/content/sliderMain/slide-2', 'jpg', 'сельское хозяйство', '380', '500')
+		+picture('img/content/sliderMain/slide-2', 'jpg', 'сельское хозяйство', '380', '500')
+		+picture('img/content/sliderMain/slide-1', 'jpg', 'сельское хозяйство', '380', '500')
+	//- include pug/sections/mainslider.pug
 	//- include pug/sections/education.pug
 	//- include pug/sections/news.pug
 	//- include pug/sections/about.pug
