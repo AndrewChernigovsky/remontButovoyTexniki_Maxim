@@ -5,20 +5,22 @@ import browserSync from 'browser-sync';
 
 async function optimizeImages() {
 	imagecomp(
-		"source/img/**/**/**/*", // Берём все изображения из папки источника
-		"build/img/", // Выгружаем оптимизированные изображения в папку назначения
-		{
-			compress_force: false,
+		"build/img/**/*.{jpg,png,jpeg}",
+		"build/img/", {
+			compress_force: true,
 			statistic: true,
 			autoupdate: true
-		}, false, // Настраиваем основные параметры
-		{
+		}, false, {
 			jpg: {
 				engine: "mozjpeg",
 				command: ["-quality", "45"]
 			}
-		}, // Сжимаем и оптимизируем изображеня
-		{
+		}, {
+			png: {
+				engine: "optipng",
+				command: ["--quality=75-100", "-o"]
+			}
+		}, {
 			png: {
 				engine: "pngquant",
 				command: ["--quality=75-100", "-o"]

@@ -63,53 +63,195 @@ async function sharp() {
 
 async function resizeImage(path, file, ext, name = '', widthLarge, widthMiddle, widthSmall) {
 	let pathBuild = path.replace('source', 'build');
-	console.log(path,file,ext,'input');
-	console.log(pathBuild,file,name, ext,'output');
+	console.log(path, file, ext, 'input');
+	console.log(pathBuild, file, name, ext, 'output');
 
 	try {
 		if (widthLarge) {
 			name = '-large'
-			await Sharp(`${path}/${file}${ext}`)
-				.resize({
-					width: widthLarge,
-				})
-				.toFile(
-					`${pathBuild}${file}${name}${ext}`
-				);
+			if (ext === '.jpg') {
+				await Sharp(`${path}/${file}${ext}`)
+					.resize({
+						width: widthLarge,
+					})
+					.jpeg({
+						quality: 60
+					})
+					.toFile(
+						`${pathBuild}${file}${name}${ext}`
+					);
+			} else {
+				await Sharp(`${path}/${file}${ext}`)
+					.resize({
+						width: widthLarge,
+					})
+					.png({
+						quality: 60
+					})
+					.toFile(
+						`${pathBuild}${file}${name}${ext}`
+					);
+			}
 		}
 		if (widthLarge) {
 			name = '-medium@2x'
-			await Sharp(`${path}/${file}${ext}`)
-				.resize({
-					width: widthLarge,
-				})
-				.toFile(
-					`${pathBuild}${file}${name}${ext}`
-				);
+			if (ext === '.jpg') {
+				await Sharp(`${path}/${file}${ext}`)
+					.resize({
+						width: widthLarge,
+					})
+					.jpeg({
+						quality: 60
+					})
+					.toFile(
+						`${pathBuild}${file}${name}${ext}`
+					);
+			} else {
+				await Sharp(`${path}/${file}${ext}`)
+					.resize({
+						width: widthLarge,
+					})
+					.png({
+						quality: 60
+					})
+					.toFile(
+						`${pathBuild}${file}${name}${ext}`
+					);
+			}
+
 		}
 		if (widthMiddle) {
 			name = '-medium'
-			await Sharp(`${path}/${file}${ext}`)
-				.resize({
-					width: widthMiddle,
-				})
-				.toFile(`${pathBuild}${file}${name}${ext}`);
+			if (ext === '.jpg') {
+				await Sharp(`${path}/${file}${ext}`)
+					.resize({
+						width: widthMiddle,
+					})
+					.jpeg({
+						quality: 60
+					})
+					.toFile(
+						`${pathBuild}${file}${name}${ext}`
+					);
+			} else {
+				await Sharp(`${path}/${file}${ext}`)
+					.resize({
+						width: widthMiddle,
+					})
+					.png({
+						quality: 60
+					})
+					.toFile(
+						`${pathBuild}${file}${name}${ext}`
+					);
+			}
 		}
 		if (widthMiddle) {
 			name = '-small@2x'
-			await Sharp(`${path}/${file}${ext}`)
-				.resize({
-					width: widthMiddle,
-				})
-				.toFile(`${pathBuild}${file}${name}${ext}`);
+			if (ext === '.jpg') {
+				await Sharp(`${path}/${file}${ext}`)
+					.resize({
+						width: widthMiddle,
+					})
+					.jpeg({
+						quality: 60
+					})
+					.toFile(
+						`${pathBuild}${file}${name}${ext}`
+					);
+			} else {
+				await Sharp(`${path}/${file}${ext}`)
+					.resize({
+						width: widthMiddle,
+					})
+					.png({
+						quality: 60
+					})
+					.toFile(
+						`${pathBuild}${file}${name}${ext}`
+					);
+			}
 		}
 		if (widthSmall) {
 			name = '-small'
-			await Sharp(`${path}/${file}${ext}`)
-				.resize({
-					width: widthSmall,
-				})
-				.toFile(`${pathBuild}${file}${name}${ext}`);
+			if (ext === '.jpg') {
+				await Sharp(`${path}/${file}${ext}`)
+					.resize({
+						width: widthSmall,
+					})
+					.jpeg({
+						quality: 60
+					})
+					.toFile(
+						`${pathBuild}${file}${name}${ext}`
+					);
+			} else {
+				await Sharp(`${path}/${file}${ext}`)
+					.resize({
+						width: widthSmall,
+					})
+					.png({
+						quality: 60
+					})
+					.toFile(
+						`${pathBuild}${file}${name}${ext}`
+					);
+			}
+		}
+
+		if (widthSmall) {
+			name = '-small@2x'
+			if (ext === '.jpg') {
+				await Sharp(`${path}/${file}${ext}`)
+					.resize({
+						width: widthMiddle,
+					})
+					.jpeg({
+						quality: 60
+					})
+					.toFile(
+						`${pathBuild}${file}${name}${ext}`
+					);
+			} else {
+				await Sharp(`${path}/${file}${ext}`)
+					.resize({
+						width: widthMiddle,
+					})
+					.png({
+						quality: 60
+					})
+					.toFile(
+						`${pathBuild}${file}${name}${ext}`
+					);
+			}
+		}
+		if (widthSmall) {
+			name = '-placeholder'
+			if (ext === '.jpg') {
+				await Sharp(`${path}/${file}${ext}`)
+					.resize({
+						width: widthSmall,
+					})
+					.jpeg({
+						quality: 60
+					})
+					.blur(6)
+					.toFile(
+						`${pathBuild}${file}${name}${ext}`
+					);
+			} else {
+				await Sharp(`${path}/${file}${ext}`)
+					.resize({
+						width: widthSmall,
+					})
+					.png({
+						quality: 60
+					})
+					.blur(6)
+					.toFile(
+						`${pathBuild}${file}${name}${ext}`
+					);
+			}
 		}
 	} catch (err) {
 		console.log(err);
@@ -119,14 +261,15 @@ async function resizeImage(path, file, ext, name = '', widthLarge, widthMiddle, 
 function createFolders(path) {
 	path = path.replace('source', 'build')
 	console.log(path);
-		try {
-			if (!fs.existsSync(path)) {
-				fs.mkdirSync((path), {recursive: true});
-				console.log(path + " already exists")
-			}
-		} catch (err) {
-			console.error(err);
+	try {
+		if (!fs.existsSync(path)) {
+			fs.mkdirSync((path), {
+				recursive: true
+			});
+			console.log(path + " already exists")
 		}
+	} catch (err) {
+		console.error(err);
+	}
 }
-
 export default sharp;

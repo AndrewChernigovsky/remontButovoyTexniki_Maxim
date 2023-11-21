@@ -5,30 +5,6 @@ polyline, path
 	fill: inherit
 	stroke: inherit
 
-.swiper-slide
-	width: 100%
-	height: 180px
-
-	@media screen and (min-width: 440px)
-		height: 200px
-
-	@media screen and (min-width: 768px)
-		height: 400px
-
-	@media screen and (min-width: 768px)
-		height: 470px
-
-	// img, video
-	// 	object-fit: cover
-	// 	width: 100%
-	// 	height: 100%
-
-	img, video
-		top: 110px
-		// width: 200px
-	picture
-		// width: 200px
-		display: block
 .swiper-main
 	min-height: 180px
 	min-height: 280px
@@ -45,13 +21,20 @@ polyline, path
 
 	.swiper-slide
 		max-height: 600px
-		min-height: 280px
+		min-height: 100%
+		// min-width: 100%
+		// min-height: 100%
 
+		.wrapperImage img
+			object-fit: cover
+			width: 100%
+			height: 100%
 		@media screen and (min-width: 768px)
 			display: flex
 			align-items: center
 			min-height: 400px
-
+			width: 100%
+			height: 100%
 	.swiper-button-prev,
 	.swiper-button-next
 		width: 25px

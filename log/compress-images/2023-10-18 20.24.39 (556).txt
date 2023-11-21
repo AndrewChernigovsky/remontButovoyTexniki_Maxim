@@ -1,8 +1,0 @@
-File from: [source/img/icons/logo-large.png]
-
-File to: [build/img/icons/logo-large.png]
-
-Compression algorithm: [pngquant]
-
-Description: Error: Command failed: E:\АНДРЕЙ (папки и файлы)\Andrey projects\Коммерческие проекты\remontButovoyTexniki_Maxim\node_modules\pngquant-bin\vendor\pngquant.exe --quality=75-100 -o build/img/icons/logo-large.png source/img/icons/logo-large.png
-  error: failed writing image to build/img/icons/logo-large.png (16)

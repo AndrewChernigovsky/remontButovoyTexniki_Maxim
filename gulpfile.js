@@ -21,14 +21,15 @@ export const build = gulp.series(
 	copy,
 	gulp.parallel(sass2css, pug2html, scripts)
 );
-
 export const images1 = gulp.series(cleanImages, sharp, copyImages);
+
+export const copyimages = gulp.series(copyImages);
 
 export const sprite1 = gulp.series(svg, sprite);
 
-export const sharp1 = gulp.series(cleanImages, sharp, sprite1);
+export const sharp1 = gulp.series(sharp);
 
-export const images = gulp.series(images1, optimizeImages);
+export const images = gulp.series(optimizeImages);
 
 export const optimazeImages = gulp.series(optimizeImages);
 

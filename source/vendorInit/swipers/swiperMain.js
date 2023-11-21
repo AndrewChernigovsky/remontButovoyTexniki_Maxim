@@ -12,7 +12,7 @@ export function init() {
 			loop: true,
 			preloadImages: true,
 			autoplay: {
-				delay: 5000,
+				delay: 500000,
 				disableOnInteraction: false,
 			},
 			pagination: {

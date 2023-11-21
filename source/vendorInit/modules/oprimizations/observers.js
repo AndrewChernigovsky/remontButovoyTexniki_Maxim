@@ -2,8 +2,8 @@ function images() {
 	let allImages = document.querySelectorAll("picture");
 	console.log(allImages, 'allImages');
 	let options = {
-		rootMargin: "0px 200px 200px 0px",
-		threshold: 0.5,
+		rootMargin: "0px 0px 200px 0px",
+		threshold: 0.2,
 	}
 	let observer = new IntersectionObserver(callback, options);
 
@@ -19,12 +19,10 @@ function images() {
 				let sourceImage = target.querySelector("img");
 				let dataImageSrc = sourceImage.getAttribute("data-src");
 				sourceImage.setAttribute("src", dataImageSrc);
+
 				source.forEach((image) => {
 					let datasrc = image.getAttribute("data-src");
 					image.setAttribute("srcset", datasrc);
-					if (image.hasAttribute("srcset")) {
-						target.querySelector("img").classList.remove("placeholder");
-					}
 				});
 				observer.unobserve(target)
 			}
