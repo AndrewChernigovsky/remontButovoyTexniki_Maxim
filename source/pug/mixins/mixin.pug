@@ -1,6 +1,6 @@
 mixin picture(path='path', format='jpg', description='bla-bla-bla', width='width', height='height')
 	if(format === 'jpg')
-		.wrapperImage(style=`background-image: url(${path}-placeholder.webp); background-size: contain; background-repeat: no-repeat; min-width: 100%; height: inherit; min-height: inherit; background-position: center;`)
+		.wrapperImage(class="placeholder" style=`background-image: url(${path}-placeholder.webp);`)
 			picture
 				source(media="(min-width: 1024px)" data-src=`${path}-large@2x.webp 2x, ${path}-large.webp 1x`)
 				source(media="(min-width: 1024px)" data-src=`${path}-large@2x.jpg 2x, ${path}-large.jpg 1x`)
@@ -8,10 +8,10 @@ mixin picture(path='path', format='jpg', description='bla-bla-bla', width='width
 				source(media="(min-width: 565px)" data-src=`${path}-medium@2x.jpg 2x, ${path}-medium.jpg 1x`)
 				source(media="(min-width: 320px)" data-src=`${path}-small@2x.webp 2x, ${path}-small.webp 1x`)
 				source(media="(min-width: 320px)" data-src=`${path}-small@2x.jpg 2x, ${path}-small.jpg 1x`)
-				img(data-src=`${path}-small.jpg` alt=`${description}` loading="lazy" width=`${width}` height=`${height}` data-placeholder=`${path}-placeholder.webp`)
+				img(data-src=`${path}-small.jpg` alt=`${description}` loading="lazy" width=`${width}` height=`${height}` data-placeholder=`${path}-placeholder.webp` onload="imgLoaded(this)")
 
 	if(format === 'png')
-		.wrapperImage(style=`background-image: url(${path}-placeholder.webp); background-size: contain; background-repeat: no-repeat; min-width: 100%; height: inherit; min-height: inherit; background-position: center;`)
+		.wrapperImage(class="placeholder" style=`background-image: url(${path}-placeholder.webp);`)
 			picture
 				source(media="(min-width: 1024px)" data-src=`${path}-large@2x.webp 2x, ${path}-large.webp 1x`)
 				source(media="(min-width: 1024px)" data-src=`${path}-large@2x.png 2x, ${path}-large.png 1x`)
@@ -19,14 +19,14 @@ mixin picture(path='path', format='jpg', description='bla-bla-bla', width='width
 				source(media="(min-width: 565px)" data-src=`${path}-medium@2x.png 2x, ${path}-medium.png 1x`)
 				source(media="(min-width: 320px)" data-src=`${path}-small@2x.webp 2x, ${path}-small.webp 1x`)
 				source(media="(min-width: 320px)" data-src=`${path}-small@2x.png 2x, ${path}-small.png 1x`)
-				img(data-src=`${path}-small.png` alt=`${description}` loading="lazy"  width=`${width}` height=`${height}`)
+				img(data-src=`${path}-small.png` alt=`${description}` loading="lazy"  width=`${width}` height=`${height}` data-placeholder=`${path}-placeholder.webp` onload="imgLoaded(this)")
 
 mixin svg(viewBox='0 0 50 50', width, height, href)
-	svg(viewBox=viewBox width=width height=height)
+	svg(viewBox=viewBox, width=width, height=height)
 		use(xlink:href=`img/sprite.svg#${href}`)
 
 mixin video(path, autoplay, loop, muted)
-	if(loop)
-		video(autoplay='autoplay' preload='metadata' loop muted playsinline class="placeholder")
-			source(data-src=path+'.webm' type="video/webm")
-			source(data-src=path+'.mp4' type="video/mp4")
+	if (loop)
+		video.placeholder(autoplay="autoplay" preload="metadata" loop muted)
+			source(data-src=path + ".webm" type="video/webm")
+			source(data-src=path + ".mp4" type="video/mp4")

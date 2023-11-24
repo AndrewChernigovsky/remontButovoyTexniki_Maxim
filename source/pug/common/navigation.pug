@@ -1,5 +1,5 @@
 nav.navigation.no-js
-	button(type="button" class="button-menu" id="btn-menu")
+	button#btn-menu.button-menu(type="button")
 		span.visually-hidden Закрыть кнопку
 	.navigation__wrapper
 		ul.navigation__list
@@ -13,4 +13,4 @@ nav.navigation.no-js
 				a.navigation__list-link.base-text.link(href="#contacts") Контакты
 		.infoWrapper
 			p.timeTo Прием заявок с 9.00 до 21.00
-			a(href=`${telephone}`)=telephoneText
+			a(href=`${telephone}`)= telephoneText

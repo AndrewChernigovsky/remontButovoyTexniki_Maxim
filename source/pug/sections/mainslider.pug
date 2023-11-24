@@ -1,37 +1,34 @@
-.swiper.swiper-main
-	.swiper-wrapper.no-view
-		.swiper-slide
-			+picture('img/content/sliderMain/slide-1', 'jpg', 'сельское хозяйство', '320', '500')
-			.swiper-main__block
-				ul.swiper-main__list
-					li Принимаем заказы круглосуточно
-					li Выезд и диагностика бесплатно
-					li Гарантия до 1 года на все виды работ
-					li Скидка пенсионерам и участникам ВОВ
-					li Работа по договору, все официально
-				a(href="#form").swiper-main__link.link Оставить Заявку
-			.swiper-lazy-preloader
-		.swiper-slide
-			+picture('img/content/sliderMain/slide-2', 'jpg', 'сельское хозяйство', '320', '500')
-			.swiper-main__block
-
-				p Мы ремонтируем:
-				ul.swiper-main__list
-					li посудомоечные машины
-					li холодильники
-					li стиральные машины
-					li телевизоры
-					li кофемашины
-				a(href="#form").swiper-main__link.link  Оставить Заявку
-			.swiper-lazy-preloader
-		.swiper-slide
-			+picture('img/content/sliderMain/slide-3', 'jpg', 'сельское хозяйство', '320', '500')
-			.swiper-main__block.lastblock
-				h2 Пенсионерам скидка
-				p 15% на все услуги
-				a(href="#form").swiper-main__link.link  Оставить Заявку
-			.swiper-lazy-preloader
-	.swiper-pagination
-		//- .swiper-button-prev
-		//- .swiper-button-next
-		//- .swiper-scrollbar
+section.section
+	.container
+		h2.visually-hidden Качественный и недорогой ремонт бытовой техники с гаранитией от 1 месяца до 1 года
+		.swiper.swiper-main
+			.swiper-wrapper.no-view
+				.swiper-slide
+					+picture('img/content/sliderMain/slide-1', 'jpg', 'сельское хозяйство', '320', '500')
+					.swiper-main__block
+						ul.swiper-main__list
+							li Принимаем заказы круглосуточно
+							li Гарантия до 1 года на все виды работ
+							li Работа по договору, все официально
+						a.swiper-main__link.link(href="#form") Оставить Заявку
+					.swiper-lazy-preloader
+				.swiper-slide
+					+picture('img/content/sliderMain/slide-2', 'jpg', 'сельское хозяйство', '320', '500')
+					.swiper-main__block
+						p Мы ремонтируем:
+						ul.swiper-main__list
+							li посудомоечные машины
+							li холодильники
+							li стиральные машины
+							li телевизоры
+							li кофемашины
+						a.swiper-main__link.link(href="#form") Оставить Заявку
+					.swiper-lazy-preloader
+				.swiper-slide
+					+picture('img/content/sliderMain/slide-3', 'jpg', 'сельское хозяйство', '320', '500')
+					.swiper-main__block.lastblock
+						h2 Пенсионерам скидка
+						p 15% на все услуги
+						a.swiper-main__link.link(href="#form") Оставить Заявку
+					.swiper-lazy-preloader
+			.swiper-pagination

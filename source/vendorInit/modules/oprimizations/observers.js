@@ -14,16 +14,20 @@ function images() {
 				isIntersecting
 			} = entry;
 
+
 			if (isIntersecting) {
 				let source = target.querySelectorAll("source");
 				let sourceImage = target.querySelector("img");
 				let dataImageSrc = sourceImage.getAttribute("data-src");
-				sourceImage.setAttribute("src", dataImageSrc);
+				let wrapperImage = target.parentNode;
 
+				sourceImage.setAttribute("src", dataImageSrc);
+				console.log(wrapperImage, 'sdfdsfsdf');
 				source.forEach((image) => {
 					let datasrc = image.getAttribute("data-src");
 					image.setAttribute("srcset", datasrc);
 				});
+
 				observer.unobserve(target)
 			}
 		});

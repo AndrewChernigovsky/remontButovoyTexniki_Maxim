@@ -7,6 +7,10 @@ import {
 import {
 	optimizations
 } from '../vendorInit/modules/oprimizations/optimizations.js';
+import {
+	validation
+}
+from '../vendorInit/modules/validation.js';
 // import * as arrowUp from "../vendorInit/up-arrow/up-arrow.js";
 
 // document.addEventListener("DOMContentLoaded", function () {
@@ -21,4 +25,5 @@ window.onload = () => {
 	swiperMainInit()
 	// arrowUp
 	optimizations()
+	validation()
 }
