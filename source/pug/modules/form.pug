@@ -1,0 +1,26 @@
+.form-mainslider
+	h2.secondary-title Оставьте заявку и мы перезвоним вам в течение 2 часов
+	.form-mainslider__wrapper
+		.form-mainslider__inner
+			form.form-mainslider(action="", method="post")
+				fieldset.form-mainslider__fieldset.personal
+					legend.form-mainslider__legend.visually-hidden Оставьте заявку и мы свяжемся с вами в течении 2 часов
+					label.form-mainslider__label
+						| Ваше полное имя
+						input.form-mainslider__input(
+							type="text",
+							placeholder="Иванов Иван Иванович",
+							name="userName"
+							required
+						)
+					label.form-mainslider__label
+						| Ваш телефон
+						input.form-mainslider__input(type="tel", placeholder="+79432321221", name="userPhone",  pattern="/\+?7(9\d{9}|\d{10})/" minlength="12" maxlength="12" required)
+					label.form-mainslider__label.form-mainslider__policy
+						| мое согласие на обработку
+						a(href='/policy') персональных данных
+						input.form-mainslider__input(type="checkbox" name="agreePolicy" required)
+				.form-mainslider__buttons
+					.wrap
+						//- button(type="reset").button.form-mainslider-section__button-reset Сбросить
+						button.button.form-mainslider__button-submit(type="submit") Отправить

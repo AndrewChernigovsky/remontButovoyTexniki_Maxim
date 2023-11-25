@@ -10,7 +10,6 @@ export function burger() {
 		button.addEventListener("click", function () {
 			burgerNav.classList.toggle(classActive);
 			burgerNav.classList.toggle(classNoActive);
-			body.classList.toggle(classActive);
 		});
 
 		navLinks.forEach((el) => {

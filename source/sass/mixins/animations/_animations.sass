@@ -1,0 +1,22 @@
+@mixin ring()
+	@keyframes ring
+		0%
+			width: 30px
+			height: 30px
+			opacity: 1
+		100%
+			width: 150px
+			height: 150px
+			opacity: 0
+
+@mixin puls($color1, $color2, $min, $max)
+	@keyframes puls
+		0%
+			transform: scale($min)
+			background-color: $color1
+		50%
+			transform: scale($max)
+			background-color: $color2
+		100%
+			transform: scale($min)
+			background-color: $color1

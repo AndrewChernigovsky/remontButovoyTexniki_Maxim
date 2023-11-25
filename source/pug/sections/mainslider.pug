@@ -6,11 +6,13 @@ section.section
 				.swiper-slide
 					+picture('img/content/sliderMain/slide-1', 'jpg', 'сельское хозяйство', '320', '500')
 					.swiper-main__block
-						ul.swiper-main__list
-							li Принимаем заказы круглосуточно
-							li Гарантия до 1 года на все виды работ
-							li Работа по договору, все официально
-						a.swiper-main__link.link(href="#form") Оставить Заявку
+						.block
+							ul.swiper-main__list
+								li Принимаем заказы круглосуточно
+								li Гарантия до 1 года на все виды работ
+								li Работа по договору, все официально
+							a.swiper-main__link.link(href="#form") Оставить Заявку
+						include ../modules/form
 					.swiper-lazy-preloader
 				.swiper-slide
 					+picture('img/content/sliderMain/slide-2', 'jpg', 'сельское хозяйство', '320', '500')

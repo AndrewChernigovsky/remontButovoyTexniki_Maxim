@@ -19,7 +19,8 @@ import gulp from "gulp";
 export const build = gulp.series(
 	clean,
 	copy,
-	gulp.parallel(sass2css, pug2html, scripts)
+	pug2html,
+	gulp.parallel(sass2css, scripts)
 );
 export const images1 = gulp.series(cleanImages, sharp, copyImages);
 

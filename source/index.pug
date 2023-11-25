@@ -35,9 +35,10 @@ block something
 block header
 	include pug/common/header.pug
 block main
-	include pug/sections/intro.pug
 	include pug/sections/mainslider.pug
+	include pug/sections/intro.pug
 	include pug/sections/services.pug
+	include pug/sections/count.pug
 	//- include pug/sections/news.pug
 	include pug/sections/about.pug
 	//- include pug/sections/teachers.pug
@@ -46,4 +47,4 @@ block main
 	include pug/sections/contacts.pug
 block footer
 	include pug/common/footer.pug
-	//- include pug/sections/help.pug
+	include pug/sections/help.pug

@@ -11,19 +11,25 @@ import {
 	validation
 }
 from '../vendorInit/modules/validation.js';
+import {
+	updateCountdown
+} from '../vendorInit/counter/counter.js';
 // import * as arrowUp from "../vendorInit/up-arrow/up-arrow.js";
 
-// document.addEventListener("DOMContentLoaded", function () {
-// 	burger()
-// 	swiperMainInit()
-// 	// arrowUp
-// 	optimizations()
-// })
-
-window.onload = () => {
+document.addEventListener("DOMContentLoaded", function () {
 	burger()
 	swiperMainInit()
 	// arrowUp
 	optimizations()
 	validation()
-}
+	setInterval(updateCountdown, 1000);
+})
+
+// window.onload = () => {
+// 	burger()
+// 	swiperMainInit()
+// 	// arrowUp
+// 	optimizations()
+// 	validation()
+// 	counter()
+// }

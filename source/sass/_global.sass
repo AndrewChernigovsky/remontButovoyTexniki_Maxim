@@ -2,10 +2,19 @@
 @import "mixins/padding-margin/padding-margin"
 @import "mixins/states/_states"
 @import "mixins/text/text"
+@import "mixins/animations/_animations"
 
 html
 	height: 100%
 	scroll-behavior: smooth
+	font-size: 8.5px
+
+	@media screen and (min-width: $min-size)
+		font-size: 10px
+	@media screen and (min-width: $medium-size)
+		font-size: 12px
+	@media screen and (min-width: $large-size)
+		font-size: 15px
 
 body
 	// height: 100%
@@ -39,7 +48,7 @@ body > footer
 
 .button,
 .link
-	font-size: 16px
+	font-size: 1.6rem
 	cursor: pointer
 	text-decoration: none
 	color: $black
@@ -71,20 +80,8 @@ img
 	// background-color: $placeholder
 
 .section
-	// color: $white
 	text-align: center
-
 	@include section
-
-	// .secondary-title
-	// 	color: $white
-	// 	font-family: $secondary-font
-	// 	text-shadow: 2px 2px 2px $black
-
-.secondary-title
-	text-transform: uppercase
-	font-weight: 700
-	margin-bottom: 50px
 
 .swiper-lazy-preloader
 	border: none
@@ -98,9 +95,6 @@ img
 	top: 50%
 	left: 50%
 	transform: translate(-50%, -50%)
-
-// .wrapperImage
-// 	position: relative
 
 .wrapperImage.loaded img
 	opacity: 1

@@ -39,7 +39,6 @@ function images() {
 
 export function observe() {
 	images();
-	// videos.observerItems();
 }
 
 

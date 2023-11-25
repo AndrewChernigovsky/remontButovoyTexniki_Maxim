@@ -1,4 +1,4 @@
-section.section.form-section#form
+.section.form-section#form
 	h2.secondary-title.form-section__title Записаться
 	.form-section__wrapper.container
 		.form-section__inner
@@ -13,14 +13,14 @@ section.section.form-section#form
 							name="userName"
 							required
 						)
-					label.form__label
-						| Ваш e-mail
-						input.form__input(
-							type="email",
-							placeholder="emailexample@gmail.com",
-							name="userEmail"
-							required
-						)
+					//- label.form__label
+					//- 	| Ваш e-mail
+					//- 	input.form__input(
+					//- 		type="email",
+					//- 		placeholder="emailexample@gmail.com",
+					//- 		name="userEmail"
+					//- 		required
+					//- 	)
 					label.form__label
 						| Ваш телефон
 						input.form__input(type="tel", placeholder="+79432321221", name="userPhone",  pattern="/\+?7(9\d{9}|\d{10})/" minlength="12" maxlength="12" required)
