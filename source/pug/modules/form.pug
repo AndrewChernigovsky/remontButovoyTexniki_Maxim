@@ -17,8 +17,9 @@
 						| Ваш телефон
 						input.form-mainslider__input(type="tel", placeholder="+79432321221", name="userPhone",  pattern="/\+?7(9\d{9}|\d{10})/" minlength="12" maxlength="12" required)
 					label.form-mainslider__label.form-mainslider__policy
-						| мое согласие на обработку
-						a(href='/policy') персональных данных
+						.inner-policy
+							span Я даю мое согласие на обработку
+							a(href='/policy') персональных данных
 						input.form-mainslider__input(type="checkbox" name="agreePolicy" required)
 				.form-mainslider__buttons
 					.wrap

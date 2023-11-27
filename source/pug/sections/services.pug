@@ -1,8 +1,29 @@
 section.section.services#service
-	h2.title.secondary-title Наши услуги
-	ul.services__list
-		li.services__item Услуга 1
-		li.services__item Услуга 1
-		li.services__item Услуга 1
-		li.services__item Услуга 1
-	+picture('img/content/person/plumber-with-thumb-up', 'jpg', 'сельское хозяйство', '200', '200')
+	.container
+		h2.title.secondary-title Наши услуги
+		ul.services__list.list
+			li.services__item
+				+svg('0 0 80 80','80','80','dishwasher')
+				.inner-service
+					span посудомоечные машины
+					span.services__cost 	2000 Р
+			li.services__item
+				+svg('0 0 80 80','80','80','fridge')
+				.inner-service
+					span холодильники
+					span.services__cost 	2000 Р
+			li.services__item
+				+svg('0 0 80 80','80','80','washing-machine')
+				.inner-service
+					span стиральные машины
+					span.services__cost 	2000 Р
+			li.services__item
+				+svg('0 0 80 80','80','80','coffee-machine')
+				.inner-service
+					span кофемашины
+					span.services__cost 	2000 Р
+			li.services__item
+				+svg('0 0 80 80','80','80','tv')
+				.inner-service
+					span телевизоры
+					span.services__cost 	2000 Р

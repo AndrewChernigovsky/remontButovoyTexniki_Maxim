@@ -1,3 +1,28 @@
+@import './../../_variables'
 .services
+	.secondary-title
+		font-family: $secondary-font
 	.wrapperImage
 		min-width: 280px
+
+	&__list
+		display: grid
+		max-width: 600px
+		margin: 0 auto
+		gap: 2rem
+
+	&__item
+		display: flex
+		justify-content: flex-start
+		gap: 2rem
+		align-items: center
+		font-size: 2rem
+		font-family: $secondary-font
+	&__cost
+		font-weight: 600
+		font-family: $secondary-font
+
+	.inner-service
+		display: flex
+		justify-content: space-between
+		flex-basis: 100%

@@ -2,24 +2,44 @@
 
 .form-mainslider
 	font-family: $secondary-font
+	display: grid
+	gap: 1rem
+
 	.form-section__wrapper
 		background: none
 		min-height: 100%
 		padding: 0
 
-	.form
-		display: block
-
 	&__fieldset
 		text-align: left
 		border: none
+		display: grid
+		gap: 2rem
 	&__label
 		font-weight: 600
 		font-family: $secondary-font
+		font-size: 1.4rem
+		display: grid
+		gap: 0.5rem
+		align-items: center
+
+		&:last-of-type
+			display: flex
+	.inner-policy
+		color: $black
+		a
+			margin-left: 0.8rem
+			text-decoration: underline
+
 	&__input
 		min-height: 40px
 		color: $black
 		font-size: 1.5rem
+	&__input[type="checkbox"]
+		width: 5rem
+		height: 5rem
+		display: block
+		cursor: pointer
 	&__button-submit
 		color: $white
 		font-weight: 600

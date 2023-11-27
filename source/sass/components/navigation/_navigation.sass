@@ -115,7 +115,8 @@
 			transition: 0.6s ease-in-out
 
 	.navigation__wrapper
-		display: block
+		display: grid
+		justify-content: center
 		position: fixed
 		z-index: 12
 		padding: 20px
@@ -130,3 +131,8 @@
 		ul
 			display: grid
 			gap: 10px
+			min-width: 100%
+		.infoWrapper
+			text-align: center
+			.base-text
+				margin-bottom: 1rem

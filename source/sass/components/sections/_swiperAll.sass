@@ -1,4 +1,4 @@
-@import 'variables'
+@import './../../_variables'
 @import "./../../mixins/text/text"
 @import "./../../mixins/animations/_animations"
 
@@ -8,13 +8,16 @@ polyline, path
 	fill: inherit
 	stroke: inherit
 
+.main-slider-section
+	border-bottom: 2px solid $white
+
+	.primary-title, .third-title
+		font-family: $secondary-font
+
 .swiper-main
 	min-height: 180px
 	min-height: 280px
 	position: relative
-
-	// @media screen and (min-width: 440px)
-	// 	min-height: 200px
 
 	@media screen and (min-width: 768px)
 		min-height: 400px
@@ -25,6 +28,16 @@ polyline, path
 	.swiper-slide
 		max-height: 600px
 		min-height: 100%
+
+		@media screen and (min-width: 1024px)
+
+			&.lastslide .wrapperImage
+				background-color: #dfe3e6
+			&.lastslide .wrapperImage img
+				object-fit: contain
+			&.lastslide .placeholder
+				background-size: contain
+
 	.wrapperImage
 		width: 100%
 	.wrapperImage img
@@ -115,8 +128,12 @@ polyline, path
 			min-height: 100%
 		&.lastblock
 			left: auto
-			right: 100px
-			top: 130px
+			right: 0
+			font-family: $secondary-font
+
+			.cost
+				font-size: 4.6rem
+
 		h2
 			margin-bottom: 10px
 		p
@@ -126,19 +143,25 @@ polyline, path
 			li
 				text-align: left
 				margin-bottom: 5px
-				font-size: 1.5rem
+				font-size: 1.6rem
+				font-family: $secondary-font
 
 		.form-mainslider
 			display: none
 			@media screen and (min-width: 1024px)
-				display: block
+				display: grid
 		.block
 			display: grid
 			min-height: 80%
 			@media screen and (min-width: 1024px)
 				display: none
-	&__list
+	.list
 		margin-bottom: 20px
+
+		li
+			display: flex
+			align-items: center
+			gap: 1rem
 	&__link
 		padding: 15px
 		color: $white

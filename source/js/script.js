@@ -14,15 +14,22 @@ from '../vendorInit/modules/validation.js';
 import {
 	updateCountdown
 } from '../vendorInit/counter/counter.js';
-// import * as arrowUp from "../vendorInit/up-arrow/up-arrow.js";
+import {
+	arrowUp
+} from "../vendorInit/up-arrow/up-arrow.js";
+import {
+	textPrint
+}
+from "../vendorInit/counter/textPrint.js";
 
 document.addEventListener("DOMContentLoaded", function () {
 	burger()
 	swiperMainInit()
-	// arrowUp
 	optimizations()
 	validation()
-	setInterval(updateCountdown, 1000);
+	textPrint('.main-slider-section  .primary-title', 'Ремонт бытовой техники в Пскове и Псковской области')
+	setInterval(() => updateCountdown('counter'), 1000);
+	arrowUp()
 })
 
 // window.onload = () => {

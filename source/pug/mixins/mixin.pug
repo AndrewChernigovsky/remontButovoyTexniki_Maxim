@@ -21,8 +21,8 @@ mixin picture(path='path', format='jpg', description='bla-bla-bla', width='width
 				source(media="(min-width: 320px)" data-src=`${path}-small@2x.png 2x, ${path}-small.png 1x`)
 				img(data-src=`${path}-small.png` alt=`${description}` loading="lazy"  width=`${width}` height=`${height}` data-placeholder=`${path}-placeholder.webp` onload="imgLoaded(this)")
 
-mixin svg(viewBox='0 0 50 50', width, height, href)
-	svg(viewBox=viewBox, width=width, height=height)
+mixin svg(viewBox='0 0 50 50', width, height, href, color)
+	svg(viewBox=viewBox, width=width, height=height fill=color)
 		use(xlink:href=`img/sprite.svg#${href}`)
 
 mixin video(path, autoplay, loop, muted)
