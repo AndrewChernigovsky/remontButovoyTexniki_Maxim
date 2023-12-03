@@ -1,4 +1,8 @@
-nav.navigation.no-js
+input(type="checkbox" id="navi-toggle" class="checkbox")
+label(for="navi-toggle" class="button")
+	span(class="icon")
+div(class="background")
+nav.navigation
 	button#btn-menu.button-menu(type="button")
 		span.visually-hidden Закрыть кнопку
 	.navigation__wrapper
@@ -11,6 +15,7 @@ nav.navigation.no-js
 				a.navigation__list-link.base-text.link(href="#stepsWorking") Этапы работы
 			li.navigation__list-item
 				a.navigation__list-link.base-text.link(href="#contacts") Контакты
-		.infoWrapper
-			p.base-text.timeTo Прием заявок с 9.00 до 21.00
-			a.base-text.link(href=`${telephone}`)= telephoneText
+			li.navigation__list-item
+				.infoWrapper
+					p.base-text.timeTo Прием заявок с 9.00 до 21.00
+					a.base-text.link(href=`${telephone}`)= telephoneText
