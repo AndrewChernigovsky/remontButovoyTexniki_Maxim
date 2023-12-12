@@ -1,10 +1,8 @@
-input(type="checkbox" id="navi-toggle" class="checkbox")
-label(for="navi-toggle" class="button")
+input.menu-toggle#nav-toggle(type="checkbox")
+label.button-toggle(for="nav-toggle")
 	span(class="icon")
 div(class="background")
 nav.navigation
-	button#btn-menu.button-menu(type="button")
-		span.visually-hidden Закрыть кнопку
 	.navigation__wrapper
 		ul.navigation__list
 			li.navigation__list-item
@@ -17,5 +15,5 @@ nav.navigation
 				a.navigation__list-link.base-text.link(href="#contacts") Контакты
 			li.navigation__list-item
 				.infoWrapper
-					p.base-text.timeTo Прием заявок с 9.00 до 21.00
-					a.base-text.link(href=`${telephone}`)= telephoneText
+					p Прием заявок с 9.00 до 21.00
+					a.link(href=`${telephone}`)= telephoneText

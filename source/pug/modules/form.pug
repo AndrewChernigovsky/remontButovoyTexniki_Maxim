@@ -6,15 +6,16 @@
 				fieldset.form-mainslider__fieldset.personal
 					legend.form-mainslider__legend.visually-hidden Оставьте заявку и мы свяжемся с вами в течении 2 часов
 					label.form-mainslider__label
-						| Ваше полное имя
+						| Ваше полное имя *
 						input.form-mainslider__input(
 							type="text",
 							placeholder="Иванов Иван Иванович",
 							name="userName"
+							minlength='3'
 							required
 						)
 					label.form-mainslider__label
-						| Ваш телефон
+						| Ваш телефон *
 						input.form-mainslider__input(type="tel", placeholder="+79432321221", name="userPhone",  pattern="/\+?7(9\d{9}|\d{10})/" minlength="12" maxlength="12" required)
 					label.form-mainslider__label.form-mainslider__policy
 						.inner-policy

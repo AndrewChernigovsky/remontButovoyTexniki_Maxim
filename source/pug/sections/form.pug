@@ -4,7 +4,7 @@
 		.form-section__inner.container
 			form.form(action="", method="post")
 				fieldset.form__fieldset.personal
-					legend.form__legend Личные данные
+					legend.form__legend.visually-hidden Введите ваши личные данные
 					label.form__label
 						| Ваше полное имя
 						input.form__input(
@@ -13,23 +13,14 @@
 							name="userName"
 							required
 						)
-					//- label.form__label
-					//- 	| Ваш e-mail
-					//- 	input.form__input(
-					//- 		type="email",
-					//- 		placeholder="emailexample@gmail.com",
-					//- 		name="userEmail"
-					//- 		required
-					//- 	)
 					label.form__label
 						| Ваш телефон
 						input.form__input(type="tel", placeholder="+79432321221", name="userPhone",  pattern="/\+?7(9\d{9}|\d{10})/" minlength="12" maxlength="12" required)
 				fieldset.form__fieldset
 					legend.form__legend Задать вопрос
-					textarea.form__textarea#textareaSymbols(name="userQuestion", cols="30", rows="10", maxlength="140")
-					span#textareaSymbolsMax Осталось символов:
-						span 	140
+					textarea.form__textarea#textareaSymbols(name="userQuestion", cols="30", rows="10", maxlength="2000")
+					span#textareaSymbolsMax.symbolsMax Осталось символов:
+						span 	2000
 				.form__buttons
 					.wrap
-						//- button(type="reset").button.form-section__button-reset Сбросить
 						button.button.form-section__button-submit(type="submit") Отправить

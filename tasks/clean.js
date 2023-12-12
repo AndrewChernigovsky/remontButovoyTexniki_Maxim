@@ -20,8 +20,9 @@ async function clean() {
 				`!${buildFolder}/fonts/**`,
 				`!${buildFolder}/js/**`,
 				`!${buildFolder}/css/**`,
-			],
-			{ force: true }
+			], {
+				force: true
+			}
 		);
 	});
 }

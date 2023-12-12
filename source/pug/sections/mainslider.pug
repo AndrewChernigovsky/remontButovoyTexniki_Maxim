@@ -1,5 +1,5 @@
 section.section.main-slider-section
-	.container
+
 		h1.visually-hidden Ремонт бытовой техники в Пскове и Псковской области
 		p.base-text.timeTo Прием заявок с 9.00 до 21.00
 			br
@@ -10,48 +10,65 @@ section.section.main-slider-section
 			.swiper-wrapper.no-view
 				.swiper-slide
 					+picture('img/content/sliderMain/slide-1', 'jpg', 'сельское хозяйство', '320', '500')
-					.swiper-main__block
-						include ../modules/form
-						.block
-							ul.swiper-main__list
-								li Принимаем заказы круглосуточно
-								li Гарантия до 1 года на все виды работ
-								li Работа по договору, все официально
-							a.swiper-main__link.link(href="#form") Оставить Заявку
+					.container
+						.swiper-main__block.counter-block
+							.wrap
+								.counter
+									.days
+										span
+										span дней
+									.hours
+										span
+										span :
+									.minutes
+										span
+										span :
+									.seconds
+										span
+										span
+								p.secondary-title Чиним всю технику со скидкой в 20% в честь Нового Года
+							.block
+								ul.swiper-main__list
+									li Принимаем заказы круглосуточно
+									li Гарантия до 1 года на все виды работ
+									li Работа по договору, все официально
+								a.swiper-main__link.link(href="#form") Оставить Заявку
 					.swiper-lazy-preloader
 				.swiper-slide
 					+picture('img/content/sliderMain/slide-2', 'jpg', 'сельское хозяйство', '320', '500')
-					.swiper-main__block
-						p.third-title Мы ремонтируем:
-						ul.swiper-main__list.list
-							li
-								+svg('0 0 50 50','50','50','dishwasher')
-								span
-									|	посудомоечные машины
-							li
-								+svg('0 0 50 50','50','50','fridge')
-								span
-									|	холодильники
-							li
-								+svg('0 0 50 50','50','50','washing-machine')
-								span
-									|	стиральные машины
-							li
-								+svg('0 0 50 50','50','50','coffee-machine')
-								span
-									|	кофемашины
-							li
-								+svg('0 0 50 50','50','50','tv')
-								span
-									|	телевизоры
-						a.swiper-main__link.link(href="#form") Оставить Заявку
-					.swiper-lazy-preloader
+					.container
+						.swiper-main__block
+							p.third-title Мы ремонтируем:
+							ul.swiper-main__list.list
+								li
+									+svg('0 0 50 50','50','50','dishwasher', 'white')
+									span
+										|	посудомоечные машины
+								li
+									+svg('0 0 50 50','50','50','fridge', 'white')
+									span
+										|	холодильники
+								li
+									+svg('0 0 50 50','50','50','washing-machine', 'white')
+									span
+										|	стиральные машины
+								li
+									+svg('0 0 50 50','50','50','coffee-machine', 'white')
+									span
+										|	кофемашины
+								li
+									+svg('0 0 50 50','50','50','tv', 'white')
+									span
+										|	телевизоры
+							a.swiper-main__link.link(href="#form") Оставить Заявку
+						.swiper-lazy-preloader
 				.swiper-slide.lastslide
 					+picture('img/content/sliderMain/slide-3', 'jpg', 'сельское хозяйство', '320', '500')
-					.swiper-main__block.lastblock
-						h2.secondary-title  Пенсионерам скидка
-						p.secondary-title.cost 15%
-						p.secondary-title  на все услуги
-						a.swiper-main__link.link(href="#form") Оставить Заявку
-					.swiper-lazy-preloader
+					.container
+						.swiper-main__block.lastblock
+							h2.secondary-title  Пенсионерам скидка
+							p.secondary-title.cost 15%
+							p.secondary-title  на все услуги
+							a.swiper-main__link.link(href="#form") Оставить Заявку
+						.swiper-lazy-preloader
 			.swiper-pagination

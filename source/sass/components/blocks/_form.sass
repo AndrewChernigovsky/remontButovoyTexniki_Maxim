@@ -4,6 +4,15 @@
 	font-family: $secondary-font
 	display: grid
 	gap: 1rem
+	padding: 10px
+	align-items: center
+	justify-content: center
+
+	@media  screen and (min-width: $medium-size)
+		padding: 40px
+
+	.secondary-title
+		text-align: center
 
 	.form-section__wrapper
 		background: none
@@ -35,9 +44,10 @@
 		min-height: 40px
 		color: $black
 		font-size: 1.5rem
+		position: relative
 	&__input[type="checkbox"]
-		width: 5rem
-		height: 5rem
+		width: 2rem
+		height: 2rem
 		display: block
 		cursor: pointer
 	&__button-submit
@@ -53,7 +63,6 @@
 		min-height: 60px
 		border: none
 		border-radius: 1000px
-		box-shadow: 12px 12px 24px $blue
 		transition: all 0.3s ease-in-out 0s
 		cursor: pointer
 		outline: none
@@ -91,3 +100,6 @@
 			left: 50%
 			transform: translate(-50%, -50%)
 			animation: ring 2.5s infinite
+	.wrap
+		display: flex
+		justify-content: center

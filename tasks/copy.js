@@ -8,8 +8,7 @@ function copy(done) {
 			"source/video/**",
 			"source/img/icons/**",
 			"source/img/icons-inline/**",
-		],
-		{
+		], {
 			base: "source",
 		}
 	).pipe(gulp.dest("build"));

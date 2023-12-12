@@ -22,21 +22,16 @@ import {
 }
 from "../vendorInit/counter/textPrint.js";
 
+import {
+	accardion
+} from "../vendorInit/accardion/accardion.js";
 document.addEventListener("DOMContentLoaded", function () {
 	burger()
 	swiperMainInit()
 	optimizations()
 	validation()
 	textPrint('.main-slider-section  .primary-title', 'Ремонт бытовой техники в Пскове и Псковской области')
-	setInterval(() => updateCountdown('counter'), 1000);
+	setInterval(() => updateCountdown('counter-block .counter'), 1000);
+	accardion()
 	arrowUp()
 })
-
-// window.onload = () => {
-// 	burger()
-// 	swiperMainInit()
-// 	// arrowUp
-// 	optimizations()
-// 	validation()
-// 	counter()
-// }

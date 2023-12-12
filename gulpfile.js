@@ -40,7 +40,6 @@ export const vendorTask = gulp.series(vendors, fonts);
 
 export default gulp.series(
 	clean,
-	copy,
 	vendorTask,
 	gulp.parallel(sass2css, pug2html, scripts),
 	gulp.series(server, watcher)
